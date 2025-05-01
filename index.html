@@ -20,7 +20,7 @@
     }
     header {
       background: linear-gradient(to right, #1e3a8a, #2563eb);
-      padding: 3rem 2rem;
+      padding: 2.5rem 1.5rem;
       text-align: center;
       animation: fadeIn 1.5s ease-out;
     }
@@ -37,7 +37,7 @@
       display: flex;
       justify-content: center;
       gap: 2rem;
-      padding: 1rem;
+      padding: 1rem 0;
       background-color: #0f172a;
       position: sticky;
       top: 0;
@@ -65,15 +65,15 @@
       width: 100%;
     }
     section {
-      padding: 3rem 2rem;
+      padding: 2.5rem 1.5rem;
       max-width: 1000px;
       margin: auto;
     }
     .card {
       background: #1e293b;
-      padding: 2rem;
+      padding: 1.5rem;
       border-radius: 1rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
       box-shadow: 0 6px 20px rgba(0,0,0,0.3);
       transform: translateY(30px);
       opacity: 0;
@@ -90,7 +90,7 @@
     .resume-download {
       display: flex;
       justify-content: center;
-      margin-top: 2rem;
+      margin-top: 1.5rem;
     }
     .resume-download a {
       background: #38bdf8;
@@ -119,6 +119,22 @@
     a:hover {
       text-decoration: underline;
     }
+    #certifications ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    #certifications li {
+      background: #1e293b;
+      padding: 1rem;
+      margin: 0.5rem 0;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      transition: all 0.3s ease;
+    }
+    #certifications li:hover {
+      background: #2563eb;
+      transform: scale(1.05);
+    }
     @keyframes fadeIn {
       from { opacity: 0; transform: translateY(-20px); }
       to { opacity: 1; transform: translateY(0); }
@@ -141,6 +157,8 @@
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#publications">Publications</a>
     <a href="#contact">Contact</a>
   </nav>
   <section id="about">
@@ -166,6 +184,23 @@
       <p><strong>Frontend:</strong> React.js, Vue.js, Angular, Next.js, HTML, CSS, Bootstrap</p>
       <p><strong>Backend:</strong> Node.js, Express.js, RESTful APIs, GraphQL</p>
       <p><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, Kubernetes, RDS</p>
+    </div>
+  </section>
+  <section id="certifications">
+    <div class="card">
+      <h3>Certifications</h3>
+      <ul>
+        <li><strong>Wipro Talentnext Java Full Stack Certification</strong> - Jun 2023</li>
+        <li><strong>Red Hat Certified Enterprise Application Developer (EX 183)</strong> - Dec 2022</li>
+        <li><strong>AWS Certified Cloud Practitioner and AWS Solutions Architect Associate</strong> - May 2022</li>
+      </ul>
+    </div>
+  </section>
+  <section id="publications">
+    <div class="card">
+      <h3>Publications</h3>
+      <p><strong>Machine Learning Approaches for Fake News Detection</strong> - IEEE, Apr 2023</p>
+      <a href="https://ieeexplore.ieee.org/document/10022536" target="_blank">Read the Paper</a>
     </div>
   </section>
   <section id="contact">
