@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vineel Kumar Vukoti | Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      color: #f8fafc;
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    header {
+      background: linear-gradient(to right, #1e3a8a, #2563eb);
+      padding: 3rem 2rem;
+      text-align: center;
+      animation: fadeIn 1.5s ease-out;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #e0f2fe;
+      margin-top: 0.5rem;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+      background-color: #0f172a;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+      animation: slideDown 1s ease;
+    }
+    nav a {
+      color: #60a5fa;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background: #60a5fa;
+      transition: 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    section {
+      padding: 3rem 2rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: #1e293b;
+      padding: 2rem;
+      border-radius: 1rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      transform: translateY(30px);
+      opacity: 0;
+      animation: fadeSlideUp 1s ease forwards;
+    }
+    .card:nth-child(1) { animation-delay: 0.2s; }
+    .card:nth-child(2) { animation-delay: 0.4s; }
+    .card:nth-child(3) { animation-delay: 0.6s; }
+    .card:nth-child(4) { animation-delay: 0.8s; }
+    .card h3 {
+      margin-top: 0;
+      color: #93c5fd;
+    }
+    .resume-download {
+      display: flex;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .resume-download a {
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    .resume-download a:hover {
+      background: #0ea5e9;
+      transform: scale(1.05);
+    }
+    footer {
+      background: #0f172a;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    a {
+      color: #38bdf8;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes slideDown {
+      from { transform: translateY(-100%); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes fadeSlideUp {
+      to { transform: translateY(0); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Vineel Kumar Vukoti</h1>
+    <p>Aspiring Software Developer | Cloud & Full Stack</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="about">
+    <div class="card">
+      <h3>About Me</h3>
+      <p>I am a Computer Science graduate passionate about web development, cloud technologies, and building impactful solutions. Certified in AWS, Java Full Stack, and Red Hat with real-world project experience through internships and self-driven learning.</p>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="card">
+      <h3>Travel Masti</h3>
+      <p>A MERN stack application for travel planning and booking, deployed on AWS with auto-scaling and RDS integration.</p>
+    </div>
+    <div class="card">
+      <h3>Online Bidding System</h3>
+      <p>Secure bidding platform with user authentication, built with the MERN stack and enhanced user experience using React.js.</p>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="card">
+      <h3>Technical Skills</h3>
+      <p><strong>Languages:</strong> C, Java, JavaScript, SQL</p>
+      <p><strong>Frontend:</strong> React.js, Vue.js, Angular, Next.js, HTML, CSS, Bootstrap</p>
+      <p><strong>Backend:</strong> Node.js, Express.js, RESTful APIs, GraphQL</p>
+      <p><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, Kubernetes, RDS</p>
+    </div>
+  </section>
+  <section id="contact">
+    <div class="card">
+      <h3>Contact</h3>
+      <p>Email: <a href="mailto:vineelvukoti@gmail.com">vineelvukoti@gmail.com</a></p>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/vineel-kumar-vukoti" target="_blank">/vineel-kumar-vukoti</a></p>
+      <p>GitHub: <a href="https://github.com/IamV1neel" target="_blank">/IamV1neel</a></p>
+    </div>
+    <div class="resume-download">
+      <a href="Vineel_Kumar_Vukoti.pdf" download>Download Resume (PDF)</a>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Vineel Kumar Vukoti. All rights reserved.
+  </footer>
+</body>
+</html>
