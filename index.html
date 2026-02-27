@@ -1,221 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vineel Kumar Vukoti | Portfolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
-      color: #f8fafc;
-      line-height: 1.6;
-      scroll-behavior: smooth;
-    }
-    header {
-      background: linear-gradient(to right, #1e3a8a, #2563eb);
-      padding: 2.5rem 1.5rem;
-      text-align: center;
-      animation: fadeIn 1.5s ease-out;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      color: #e0f2fe;
-      margin-top: 0.5rem;
-    }
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 2rem;
-      padding: 1rem 0;
-      background-color: #0f172a;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-      animation: slideDown 1s ease;
-    }
-    nav a {
-      color: #60a5fa;
-      text-decoration: none;
-      font-weight: 600;
-      position: relative;
-    }
-    nav a::after {
-      content: '';
-      position: absolute;
-      bottom: -4px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background: #60a5fa;
-      transition: 0.3s;
-    }
-    nav a:hover::after {
-      width: 100%;
-    }
-    section {
-      padding: 2.5rem 1.5rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    .card {
-      background: #1e293b;
-      padding: 1.5rem;
-      border-radius: 1rem;
-      margin-bottom: 1.5rem;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
-      transform: translateY(30px);
-      opacity: 0;
-      animation: fadeSlideUp 1s ease forwards;
-    }
-    .card:nth-child(1) { animation-delay: 0.2s; }
-    .card:nth-child(2) { animation-delay: 0.4s; }
-    .card:nth-child(3) { animation-delay: 0.6s; }
-    .card:nth-child(4) { animation-delay: 0.8s; }
-    .card h3 {
-      margin-top: 0;
-      color: #93c5fd;
-    }
-    .resume-download {
-      display: flex;
-      justify-content: center;
-      margin-top: 1.5rem;
-    }
-    .resume-download a {
-      background: #38bdf8;
-      color: #0f172a;
-      padding: 0.75rem 1.5rem;
-      border-radius: 0.5rem;
-      font-weight: 600;
-      text-decoration: none;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      transition: all 0.3s ease;
-    }
-    .resume-download a:hover {
-      background: #0ea5e9;
-      transform: scale(1.05);
-    }
-    footer {
-      background: #0f172a;
-      padding: 1.5rem;
-      text-align: center;
-      font-size: 0.9rem;
-      color: #94a3b8;
-    }
-    a {
-      color: #38bdf8;
-    }
-    a:hover {
-      text-decoration: underline;
-    }
-    #certifications ul {
-      list-style-type: none;
-      padding: 0;
-    }
-    #certifications li {
-      background: #1e293b;
-      padding: 1rem;
-      margin: 0.5rem 0;
-      border-radius: 0.5rem;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-      transition: all 0.3s ease;
-    }
-    #certifications li:hover {
-      background: #2563eb;
-      transform: scale(1.05);
-    }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes slideDown {
-      from { transform: translateY(-100%); opacity: 0; }
-      to { transform: translateY(0); opacity: 1; }
-    }
-    @keyframes fadeSlideUp {
-      to { transform: translateY(0); opacity: 1; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vineel Kumar Vukoti | Java Full Stack Developer</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:#07080c;
+  color:#e5e7eb;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+
+/* subtle engineering grid */
+body::before{
+  content:"";
+  position:fixed;
+  inset:0;
+  background:
+    linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size:100px 100px;
+  z-index:-1;
+}
+
+/* HERO */
+header{
+  position:relative;
+  min-height:95vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:0 10%;
+  border-bottom:1px solid #111;
+}
+
+.hero-number{
+  position:absolute;
+  top:20%;
+  right:8%;
+  font-size:18rem;
+  font-weight:900;
+  opacity:0.03;
+}
+
+header h1{
+  font-size:7rem;
+  font-weight:900;
+  line-height:0.9;
+  letter-spacing:-3px;
+}
+
+header p{
+  margin-top:2rem;
+  font-size:1rem;
+  color:#9ca3af;
+  letter-spacing:2px;
+}
+
+/* NAV */
+nav{
+  display:flex;
+  justify-content:center;
+  gap:3rem;
+  padding:1.5rem 0;
+  border-bottom:1px solid #111;
+  background:#07080c;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav a{
+  color:#9ca3af;
+  text-decoration:none;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#fff;
+}
+
+/* SECTIONS */
+section{
+  padding:5rem 10%;
+  border-bottom:1px solid #111;
+  position:relative;
+}
+
+.section-index{
+  position:absolute;
+  top:2rem;
+  right:10%;
+  font-size:6rem;
+  font-weight:900;
+  opacity:0.03;
+}
+
+h2{
+  font-size:2.2rem;
+  margin-bottom:2rem;
+}
+
+.projects-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:3rem;
+}
+
+.project{
+  border-top:2px solid #1f2937;
+  padding-top:1.5rem;
+}
+
+.project h3{
+  font-size:1.4rem;
+  margin-bottom:1rem;
+}
+
+ul{
+  margin-top:1rem;
+  padding-left:20px;
+}
+
+.skills-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:2rem;
+}
+
+.resume-download{
+  text-align:center;
+  margin-top:3rem;
+}
+
+.resume-download a{
+  display:inline-block;
+  padding:.9rem 1.8rem;
+  border:1px solid #fff;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  transition:0.3s;
+}
+
+.resume-download a:hover{
+  background:#fff;
+  color:#07080c;
+}
+
+footer{
+  text-align:center;
+  padding:3rem;
+  font-size:0.9rem;
+  color:#6b7280;
+}
+
+a{color:#fff;}
+
+@media(max-width:900px){
+  header h1{font-size:3.5rem;}
+  .projects-grid,
+  .skills-grid{
+    grid-template-columns:1fr;
+  }
+}
+</style>
 </head>
+
 <body>
-  <header>
-    <h1>Vineel Kumar Vukoti</h1>
-    <p>Aspiring Software Developer | Cloud & Full Stack</p>
-  </header>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#skills">Skills</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#publications">Publications</a>
-    <a href="#contact">Contact</a>
-  </nav>
-  <section id="about">
-    <div class="card">
-      <h3>About Me</h3>
-      <p>I am a Computer Science graduate passionate about web development, cloud technologies, and building impactful solutions. Certified in AWS, Java Full Stack, and Red Hat with real-world project experience through internships and self-driven learning.</p>
-    </div>
-  </section>
-  <section id="projects">
-    <div class="card">
-      <h3>Travel Masti</h3>
-      <p>A MERN stack application for travel planning and booking, deployed on AWS with auto-scaling and RDS integration.</p>
-    </div>
-    <div class="card">
-      <h3>Online Bidding System</h3>
-      <p>Secure bidding platform with user authentication, built with the MERN stack and enhanced user experience using React.js.</p>
-    </div>
-  </section>
-  <section id="skills">
-    <div class="card">
-      <h3>Technical Skills</h3>
-      <p><strong>Languages:</strong> C, Java, JavaScript, SQL</p>
-      <p><strong>Frontend:</strong> React.js, Vue.js, Angular, Next.js, HTML, CSS, Bootstrap</p>
-      <p><strong>Backend:</strong> Node.js, Express.js, RESTful APIs, GraphQL</p>
-      <p><strong>Cloud & DevOps:</strong> AWS, Azure, Docker, Kubernetes, RDS</p>
-    </div>
-  </section>
-  <section id="certifications">
-    <div class="card">
-      <h3>Certifications</h3>
-      <ul>
-        <li><strong>Wipro Talentnext Java Full Stack Certification</strong> - Jun 2023</li>
-        <li><strong>Red Hat Certified Enterprise Application Developer (EX 183)</strong> - Dec 2022</li>
-        <li><strong>AWS Certified Cloud Practitioner and AWS Solutions Architect Associate</strong> - May 2022</li>
-      </ul>
-    </div>
-  </section>
-  <section id="publications">
-    <div class="card">
-      <h3>Publications</h3>
-      <p><strong>Machine Learning Approaches for Fake News Detection</strong> - IEEE, Apr 2023</p>
-      <a href="https://ieeexplore.ieee.org/document/10022536" target="_blank">Read the Paper</a>
-    </div>
-  </section>
-  <section id="contact">
-    <div class="card">
-      <h3>Contact</h3>
-      <p>Email: <a href="mailto:vineelvukoti@gmail.com">vineelvukoti@gmail.com</a></p>
-      <p>LinkedIn: <a href="https://www.linkedin.com/in/vineel-kumar-vukoti" target="_blank">/vineel-kumar-vukoti</a></p>
-      <p>GitHub: <a href="https://github.com/IamV1neel" target="_blank">/IamV1neel</a></p>
-    </div>
-    <div class="resume-download">
-      <a href="Vineel_Kumar_Vukoti.pdf" download>Download Resume (PDF)</a>
-    </div>
-  </section>
-  <footer>
-    &copy; 2025 Vineel Kumar Vukoti. All rights reserved.
-  </footer>
+
+<header>
+<div class="hero-number">01</div>
+<h1>
+Vineel<br>
+Kumar<br>
+Vukoti
+</h1>
+<p>Java Full Stack Developer — Spring Boot — AWS — Backend Systems</p>
+</header>
+
+<nav>
+<a href="#about">About</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#education">Education</a>
+<a href="#certifications">Certifications</a>
+<a href="#publications">Publications</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+<div class="section-index">02</div>
+<h2>About</h2>
+<p>
+Results-driven Java Full Stack Developer with expertise in Java, Spring Boot, RESTful API development, and AWS cloud deployment.
+Experienced in implementing JWT-based authentication, Spring Security, and optimizing relational databases using MySQL and PostgreSQL.
+Focused on building scalable, production-ready backend systems with clean architecture.
+</p>
+</section>
+
+<section id="projects">
+<div class="section-index">03</div>
+<h2>Projects</h2>
+
+<div class="projects-grid">
+
+<div class="project">
+<h3>Student Management System (2025)</h3>
+<p><strong>Tech:</strong> Java, Spring Boot, React.js, MySQL, AWS</p>
+<ul>
+<li>Developed full-stack system for managing student records and enrollments.</li>
+<li>Built RESTful APIs using Spring Boot.</li>
+<li>Implemented JWT authentication & Spring Security.</li>
+<li>Optimized database queries improving performance by ~40%.</li>
+<li>Deployed on AWS EC2 with MySQL backend.</li>
+</ul>
+</div>
+
+<div class="project">
+<h3>Task Management System (2025)</h3>
+<p><strong>Tech:</strong> Spring Boot, Angular, PostgreSQL</p>
+<ul>
+<li>Designed scalable task tracking platform.</li>
+<li>Engineered REST APIs for task and user modules.</li>
+<li>Implemented JWT-based authorization.</li>
+<li>Used Spring Data JPA with PostgreSQL.</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<section id="skills">
+<div class="section-index">04</div>
+<h2>Technical Skills</h2>
+
+<div class="skills-grid">
+<div>
+<p><strong>Programming:</strong> Java, SQL</p>
+<p><strong>Backend:</strong> Spring Boot, Spring MVC, Spring Security, Hibernate, Spring Data JPA, REST APIs</p>
+<p><strong>Frontend:</strong> React.js, Angular, HTML5, CSS3</p>
+</div>
+<div>
+<p><strong>Databases:</strong> MySQL, PostgreSQL</p>
+<p><strong>Cloud & DevOps:</strong> AWS (EC2, S3), Docker</p>
+<p><strong>Tools:</strong> Git, GitHub, JWT Authentication</p>
+</div>
+</div>
+</section>
+
+<section id="education">
+<div class="section-index">05</div>
+<h2>Education</h2>
+
+<p><strong>Koneru Lakshmaiah Education Foundation</strong><br>
+B.Tech in Computer Science Engineering — CGPA: 8.91 (2020–2024)</p>
+
+<br>
+
+<p><strong>Sri Sarada Jr College</strong><br>
+Intermediate Education — CGPA: 8.86 (2018–2020)</p>
+
+</section>
+
+<section id="certifications">
+<div class="section-index">06</div>
+<h2>Certifications</h2>
+<ul>
+<li>AWS Certified Cloud Practitioner</li>
+<li>AWS Solutions Architect – Associate</li>
+<li>Red Hat Certified Enterprise Application Developer (EX183)</li>
+<li>Wipro TalentNext Java Full Stack Certification</li>
+</ul>
+</section>
+
+<section id="publications">
+<div class="section-index">07</div>
+<h2>Publication</h2>
+<p>
+Machine Learning Approaches for Fake News Detection — IEEE (April 2023)
+</p>
+</section>
+
+<section id="contact">
+<div class="section-index">08</div>
+<h2>Contact</h2>
+<p>Email: <a href="mailto:vineelvukoti@gmail.com">vineelvukoti@gmail.com</a></p>
+<p>LinkedIn: <a href="https://www.linkedin.com/in/vineel-kumar-vukoti" target="_blank">linkedin.com/in/vineel-kumar-vukoti</a></p>
+<p>GitHub: <a href="https://github.com/IamV1neel" target="_blank">github.com/IamV1neel</a></p>
+
+<div class="resume-download">
+<a href="Vineel_Kumar_Vukoti.pdf" download>Download Resume</a>
+</div>
+</section>
+
+<footer>
+© 2026 Vineel Kumar Vukoti
+</footer>
+
 </body>
 </html>
